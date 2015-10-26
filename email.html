@@ -14,7 +14,8 @@
                 padding-bottom: 200px;
             }
             #how, #alreadyLA {
-                background-color: #3C284A;
+                background-color: #4F3462;
+                padding: 30px 1% 30px 1%;
             }
             #welcome, #how, #alreadyLA, #evolve, .value, .foot{
                 padding: 30px 5% 34px 5%;
@@ -65,8 +66,9 @@
                 display: block;
                 font-family: "Avenir",sans-serif, "Arial", sans-serif;
                 font-weight: 200;
-                font-size: 15px;
+                font-size: 20px;
                 color: #FFFFFF;
+                margin-bottom: 15px;
                 line-height: 30px;
             }
             #how li {
@@ -77,25 +79,27 @@
             }
             #how img {
                 margin-bottom: 30px;
+                width: 55%;
             }
             .num {
                 background: rgba(255,255,255,0.36);
                 border: 1px solid #FFFFFF;
                 display: inline-block;
-                width:56.4px;
-                height:56.4px;
+                width:37px;
+                height:37px;
                 border-radius:50%;
                 text-align:center;
                 font-family: Avenir-Heavy;
-                font-size: 31.25px;
+                font-size: 18px;
                 color: #3D284C;
-                line-height: 60px;
+                line-height: 39px;
             }
             #how p {
                 margin-bottom: 5px;
                 font-family: Avenir-Medium;
                 font-size: 25px;
                 color: #FFFFFF;
+                margin-top:15px;
                 line-height: 27px;
             }
             .flyingIn {
@@ -114,9 +118,9 @@
             }
             .flyingInSub {
                 font-family: AvenirNext-Regular !important;
-                font-size: 12px !important;
+                font-size: 16px !important;
                 color: #FFFFFF;
-                line-height: 15px !important;
+                line-height: 25px !important;
             }
             .flyin img {
                 max-width: 100%;
@@ -142,6 +146,10 @@
             }
             #evolve {
                 background-color: #D4D8DB;
+                padding: 30px 10% 30px 10%;
+            }
+            #evolve img {
+                margin-top: 20px;
             }
             #evolve span {
                 font-family: AvenirNext-Regular;
@@ -149,6 +157,7 @@
                 font-size: 32px;
                 color: #525252;
                 line-height: 90px;
+                margin-top: 5px;
             }
             #evolve p {
                 font-family: AvenirNext-Regular;
@@ -167,7 +176,7 @@
                 padding: 30px 12% 30px 12%;
             }
             .value span {
-                display: block;
+                display: inline-block;
                 font-family: Avenir-Light;
                 font-size: 28px;
                 color: #D5D5D5;
@@ -205,17 +214,17 @@
             }
             .small {
                 font-family: AvenirNext-Regular !important;
-                font-size: 13px !important;
+                font-size: 10px !important;
                 color: #B3B3B3 !important;
-                line-height: 15px !important;
+                line-height: 11px !important;
                 text-align: left !important;
             }
             .hoover {
                 font-family: Avenir-Medium !important;
-                font-size: 24px !important;
+                font-size: 20px !important;
                 text-align: left !important;
                 color: #ECECEC !important;
-                line-height: 33px !important;
+                line-height: 23px !important;
             }
             .twitter {
                 font-family: Avenir-Light !important;
@@ -235,6 +244,7 @@
                 color: #494949 !important;
                 letter-spacing: 0.07px !important;
                 line-height: 33px !important;
+                margin-top: 5px !important;
             }
             .foot img {
             }
@@ -242,7 +252,10 @@
                 font-family: Avenir-Light !important;
                 font-size: 20px !important;
                 color: #494949 !important;
-                line-height: 22px !important;
+                line-height: 27px !important;
+            }
+            .foot br {
+                line-height: 30px !important;
             }
             .last {
                 font-family: Avenir-Book !important;
@@ -251,8 +264,8 @@
                 line-height: 25px !important;
             }
             .socialicons img {
-                width: 50px;
-                height: 50px;
+                width: 70px;
+                height: 70px;
             }
         </style>
     </head>
@@ -290,7 +303,7 @@
                     </li>
                 </ul>
                 <span class="flyingIn">FLYING IN?</span>
-                <p class="flyingInSub">Meet your Skurt Agent in the airport at arrivals. They’ll accompany you to your car awaiting nearby.</p>
+                <p class="flyingInSub">Meet your Skurt Agent in the airport at arrivals.<br>They’ll accompany you to your car awaiting nearby.</p>
             </div>
             <div class="flyin">
                 <div class="avail">available at LAX airport</div>
@@ -357,12 +370,15 @@
             <div class="value">
                 <p>"Skurt greeted me at the airport, walked my bags to the vehicle, and handed me the keys within 10 minutes of arrival. I'll be using it again next time I visit LA (in a few days, actually)."</p>
                 <div style="text-align:center">
-                    <span><img src="http://i.imgur.com/ExoykQN.png" style="border-radius:50%;border:2px solid white;"/></span>
-                    <span class="hoover">Ryan Hoover</span>
-                    <span class="small">Product Hunt - Founder &amp; CEO
+                    <div style="display:inline-block;vertical-align:top;">
+                        <img src="http://i.imgur.com/ExoykQN.png" style="border-radius:50%;border:2px solid white;"/>
+                    </div>
+                    <div style="display:inline-block;vertical-align:top;padding-top:40px;">
+                        <span class="hoover">Ryan Hoover</span><br>
+                        <span class="small">Product Hunt - Founder &amp; CEO</span>
                         <!--<img src="http://i.imgur.com/jNsVTJg.png"/>
                         <span class="twitter">via Twiter</span>-->
-                    </span>
+                    </div>
                 </div>
                 
             </div>
