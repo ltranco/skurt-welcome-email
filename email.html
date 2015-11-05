@@ -1,408 +1,83 @@
 <!doctype html>
 <html>
     <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+        <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, initial-scale=1, user-scalable=no"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="email=no">
+        <meta name="format-detection" content="date=no">
         <title>Skurt Welcome Email</title>
-        <style>
-            html, body, #welcome h1, #how ul { 
-                margin: 0; 
-                padding: 0; 
-            }
-            #welcome { 
-                background: #D6D7DB;
-                padding-bottom: 200px;
-            }
-            #how, #alreadyLA {
-                background-color: #4F3462;
-                padding: 30px 1% 30px 1%;
-            }
-            #welcome, #how, #alreadyLA, #evolve, .value, .foot{
-                padding: 30px 5% 34px 5%;
-                box-shadow: 0px 2px 11px 0px rgba(38,38,38,0.50);
-                text-align: center;
-                font-family: "Avenir",sans-serif, "Arial", sans-serif;
-            }
-            #welcome p {
-                font-size: 28px;
-                font-family: "Avenir",sans-serif, "Arial", sans-serif;
-                color: #4C4C4C;
-                font-weight: 400;
-                letter-spacing: 0px;
-                line-height: 29px;
-                margin-bottom: 15px;
-            }
-            .subheader {
-                font-family: Avenir-Book;
-                font-size: 16px;
-                color: #4C4C4C;
-                line-height: 23px;                
-                display: block;
-                margin-bottom: 50px;
-            }
-            .give {
-                font-family: "Avenir",sans-serif, "Arial", sans-serif;
-                font-weight: 400;
-                font-size: 16px;
-                color: #797979;
-                display: block;
-                line-height: 17px;
-                margin-bottom: 30px;
-            }
-            #welcome br {
-                line-height: 26px;
-            }
-            #button {
-                font-family: "Avenir",sans-serif, "Arial", sans-serif;
-                padding: 20px 34px 20px 34px;
-                letter-spacing: 2.06px;
-                background-color: #4A90E2;
-                color: white;
-                font-weight: 200;
-                border-radius: 6px;
-                cursor: pointer;
-            }
-            #how span {
-                display: block;
-                font-family: "Avenir",sans-serif, "Arial", sans-serif;
-                font-weight: 200;
-                font-size: 20px;
-                color: #FFFFFF;
-                margin-bottom: 15px;
-                line-height: 30px;
-            }
-            #how li {
-                display: block;
-                margin: 0 20px 10px 20px;
-                color: white;
-                text-align: center;
-            }
-            #how img {
-                margin-bottom: 30px;
-                max-width: 90%;
-            }
-            .num {
-                background: rgba(255,255,255,0.36);
-                border: 1px solid #FFFFFF;
-                display: inline-block;
-                width:37px;
-                height:37px;
-                border-radius:50%;
-                text-align:center;
-                font-family: Avenir-Heavy;
-                font-size: 18px;
-                color: #3D284C;
-                line-height: 39px;
-            }
-            #how p {
-                margin-bottom: 5px;
-                font-family: Avenir-Medium;
-                font-size: 25px;
-                color: #FFFFFF;
-                margin-top:15px;
-                line-height: 27px;
-            }
-            .flyingIn {
-                font-family: AvenirNext-DemiBold !important;
-                font-size: 36px !important;
-                color: #FFFFFF;
-                letter-spacing: 8.02px;
-                line-height: 37px !important;
-                margin-top: 70px;
-            }
-            .flyIn {
-                margin-bottom: -4px;
-            }
-            .flyingIn2 {
-                margin-top: 0;
-            }
-            .flyingInSub {
-                font-family: AvenirNext-Regular !important;
-                font-size: 16px !important;
-                color: #FFFFFF;
-                line-height: 25px !important;
-            }
-            .flyin img {
-                max-width: 100%;
-                max-height: 100%;
-                margin-bottom: 0;
-                display: block;
-            }
-            .avail {
-                background: rgba(234,234,234,0.91);
-                margin-top: 0 !important;
-                left:0;
-                right:0;
-                margin-left:auto;
-                margin-right:auto;
-                font-family: AvenirNext-Medium;
-                font-size: 27px;
-                color: #585858;
-                letter-spacing: 0px;
-                line-height: 37px;
-                width: 100%;
-                padding: 10px 0 10px 0;
-                text-align: center;
-            }
-            #evolve {
-                background-color: #D4D8DB;
-                padding: 30px 10% 30px 10%;
-            }
-            #evolve img {
-                margin-top: 20px;
-            }
-            #evolve span {
-                font-family: AvenirNext-Regular;
-                display: block;
-                font-size: 32px;
-                color: #525252;
-                line-height: 90px;
-                margin-top: 5px;
-            }
-            #evolve p {
-                font-family: AvenirNext-Regular;
-                font-size: 18px;
-                color: #525252;
-                margin-top: -11px;
-                line-height: 20px;
-                margin-left: 5%;
-                margin-right: 5%;
-            }
-            .value {
-                background: #2A2A2A;
-                margin-top: -36px;
-                text-align: left;
-                color: white;
-                padding: 30px 12% 30px 12%;
-            }
-            .value span {
-                display: inline-block;
-                font-family: Avenir-Light;
-                font-size: 28px;
-                color: #D5D5D5;
-                line-height: 30px;
-            }
-            .value img {
-                margin-top: 40px;
-                margin-bottom: 10px;
-            }
-            .value p {
-                font-family: AvenirNext-Regular;
-                font-size: 17px;
-                color: #D5D5D5;
-                line-height: 19px;
-            }
-            .bline {
-                background: #4A90E2;
-                border-radius: 1px;
-                height: 1px;
-                width: 100%;
-                margin: 2px 0 14px 0;
-            }
-            .divider {
-                border: 1px solid #979797;
-                height: 1px;    
-                position: absolute;
-                width: 100%;
-            }
-            .quote {
-                opacity: 0.15;
-                font-family: LucidaGrande;
-                font-size: 163.36px;
-                color: #ECECEC;
-                line-height: 192px;
-            }
-            .small {
-                font-family: AvenirNext-Regular !important;
-                font-size: 10px !important;
-                color: #B3B3B3 !important;
-                line-height: 11px !important;
-                text-align: left !important;
-            }
-            .hoover {
-                font-family: Avenir-Medium !important;
-                font-size: 20px !important;
-                text-align: left !important;
-                color: #ECECEC !important;
-                line-height: 23px !important;
-            }
-            .twitter {
-                font-family: Avenir-Light !important;
-                font-size: 13.75px !important;
-                color: #E8E8E8 !important;
-                line-height: 19px !important;
-                margin-right: 5px !important;
-                display: inline-block !important;
-            }
-            .foot {
-                background: #D6D7DB;
-            }
-            .foot span {
-                font-family: Avenir-Heavy !important;
-                font-size: 23.5px !important;
-                display: block !important;
-                color: #494949 !important;
-                letter-spacing: 0.07px !important;
-                line-height: 33px !important;
-                margin-top: 5px !important;
-            }
-            .foot img {
-            }
-            .foot p {
-                font-family: Avenir-Light !important;
-                font-size: 20px !important;
-                color: #494949 !important;
-                line-height: 27px !important;
-            }
-            .foot br {
-                line-height: 30px !important;
-            }
-            .last {
-                font-family: Avenir-Book !important;
-                font-size: 15px !important;
-                color: #4C4C4C !important;
-                line-height: 25px !important;
-            }
-            .socialicons img {
-                width: 70px;
-                height: 70px;
-            }
-        </style>
+
     </head>
 
-    <body>
-        <div class="container">
-            <div id="welcome">
-                <img style="width:100px;margin-top:13px;" src="http://i.imgur.com/5wtd25X.png"/>
-                <p>Welcome to Skurt</p>
-                <span class="subheader">It’s the fastest way to rent a car.<br>Say goodbye to long lines &amp; paperwork.<br>We deliver the car right to you.</span>
-                <img style="max-width:95%;margin:20px 0 34px 0;" src="http://i.imgur.com/xfTeiE3.png"/>
-                <span class="give">GIVE <b>$50</b>, GET <b>$50</b></span>
-                <a id="button"><b>SHARE YOUR CODE</b></a><br><br>
+    <body style="width:100%;background-color:white;margin-left:auto;margin-right:auto;text-align:center;font-family:'Avenir',sans-serif,'Arial',sans-serif;">
+        <style type="text/css">
+            body, div {
+               padding: 0;
+               margin: 0;
+               -webkit-text-size-adjust: none;
+            }
+            @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+                p[class="1"] {line-height:22px !important;font-size:14px !important;color:#4c4c4c !important;}
+                div[class="2"] {width:250px !important}
+                img[class="3"] {width:301px !important}
+                div[class="4"] {width: 340px !important;font-size:13px !important;}
+                img[class="4a"] {width: 20px !important; height: 20px !important;}
+                div[class="5"] {width: 130px !important; margin-right: 10px !important;}
+                p[class="5a"] {font-size: 25px !important;}
+                div[class="6"] {width:300px !important;}
+                p[class="7"] {font-size: 12px !important; width: 300px !important;}
+            }
+        </style>
+            <div style="max-width:640px;height:9px;background-color:#75538d;margin-bottom:26px;"></div>
+            <img src="https://s3-us-west-1.amazonaws.com/booking-email/logo-s.svg" style="width:122px;margin-bottom:0px;"/>
+            <div style="width:4px;height:29px;background-color:#f0f0f0;margin-top:0px;padding:0;margin-left:auto;margin-right:auto;"></div>
+            <div style="display:inline-block;position:relative;width:214px;height:45px;margin-bottom:23px;background-color:#f0f0f0;margin-left:auto;margin-right:auto;border-radius:40px;vertical-align:middle;">
+                <span style="display:inline-block;vertical-align:middle;margin-top:15px;"><p style="margin-top:0px;">BOOKING <b>#451</b></p></span>
             </div>
-            <div id="how">
-                <ul>
-                    <li>
-                        <div class="num">1</div>
-                        <p>Choose Your Car</p>
-                        <span>We have just the car for you.</span>
-                        
-                        <!--<img src="http://i.imgur.com/p5iwsMn.png"/>-->
-                        <img style="max-width:95%;margin:20px 0 34px 0;" src="http://f.cl.ly/items/0h1C1L453N2u2A2s3I1l/checkout.png"/>
-                    </li>
-                    <li>
-                        <div class="num">2</div>
-                        <p>Sign on Your Phone</p>
-                        <span>No lines or paperwork.</span>
-                        <!--<img src="http://i.imgur.com/p5iwsMn.png"/>-->
-                        <img src="http://f.cl.ly/items/0h1C1L453N2u2A2s3I1l/checkout.png"/>
-                    </li>
-                    <li>
-                        <div class="num">3</div>
-                        <p>Get Your Car</p>
-                        <span>We'll bring your car right to you.</span>
-                        <!--img src="http://i.imgur.com/p5iwsMn.png"/>-->
-                        <img src="http://f.cl.ly/items/0h1C1L453N2u2A2s3I1l/checkout.png"/>
-                    </li>
+            <div style="margin-bottom:21px;">
+                <p class="1" style="line-height:44px;font-size:27px;color:#4c4c4c;-webkit-text-size-adjust:none">You just received a new booking from Skurt!<br>Bookings are first come first serve.<br><b>Please respond quickly.</b></p>
+            </div>
+            <div class="2" style="width:520px;height:2px;margin-bottom:51px;margin-left:auto;margin-right:auto;background-color:#363636;"></div>
+            <img class="3" style="display:block;margin-left:auto;margin-right:auto;width:541px;margin-bottom:39px;" src="https://s3-us-west-1.amazonaws.com/booking-email/car.png"/>
+            <div class="4" style="width:541px;margin-bottom:35px;">
+                <ul style="display:inline-block;width:50%;text-align:left;list-style:none;padding:0;">
+                    <li style="margin-bottom:15px;"><img class="4a" style="width:32px;height:32px;vertical-align:middle;margin-right:15px;" src="https://s3-us-west-1.amazonaws.com/booking-email/1446589925-14-copy-2%403x.png"/>Convertible - <b>4 days</b></li>
+                    <li style="margin-bottom:15px;"><img class="4a" style="width:32px;height:32px;vertical-align:middle;margin-right:15px;" src="https://s3-us-west-1.amazonaws.com/booking-email/1446589925-14%402x.png" /> <b>CDW</b>: Accepted</li>
+                    <li style="margin-bottom:15px;"><img class="4a" style="width:32px;height:32px;vertical-align:middle;margin-right:15px;" src="https://s3-us-west-1.amazonaws.com/booking-email/1446594482-car%403x.png" /><b>SLI</b>: Declined</li>
                 </ul>
-                <span class="flyingIn">FLYING IN?</span>
-                <p class="flyingInSub">Meet your Skurt Agent in the airport at arrivals.<br>They’ll accompany you to your car awaiting nearby.</p>
+                <ul id="timeline" style="display:inline-block;list-style:none;padding:0;margin:0;">
+                    <li style=""><p><b>JULY 12</b><br>8:30 AM</p></li>
+                    <li><p><b>JULY 17</b><br>12:30 PM</p></li>
+                </ul>
             </div>
-            <div class="flyin">
-                <div class="avail">available at LAX airport</div>
-                <div style="overflow:hidden">
-                    <img src="http://i.imgur.com/wa1bZYK.jpg"/>
+            <div style="margin-bottom: 32px;">
+                <div class="5" style="display:inline-block;width:265px;background-color:#f0f0f0;border-radius:6px;margin-right:35px;">
+                    <p style="height:29px;color:#9d9d9d;margin:10px 0 0 0;">DAILY</p>
+                    <div style="height:3px;background-color:#ffffff;margin:0px;"></div>
+                    <p class="5a" style="color:#595959;margin:10px 0 10px 0;font-size:44px;font-weigth:700;">$47.88</p>
+                </div>
+                <div class="5" style="display:inline-block;width:265px;background-color:#f0f0f0;border-radius:6px;">
+                    <p style="height:29px;color:#9d9d9d;margin:10px 0 0 0;">TOTAL</p>
+                    <div style="height:3px;background-color:#ffffff;margin:0px;"></div>
+                    <p class="5a" style="color:#595959;margin:10px 0 10px 0;font-size:44px;font-weigth:700;">$227.52</p>
                 </div>
             </div>
-            <div id="alreadyLA">
-                <span class="flyingIn" class="flyingIn2">ALREADY IN LA?</span>
-                <p class="flyingInSub">We'll deliver your car.</p>
+            <div class="6" style="width:565px;border-radius:15px;background-color:#4a90e2;margin-left:auto;margin-right:auto;height:98px;margin-bottom:32px;">
+                <span style="display:inline-block;vertical-align:middle;margin-top:15px;"><p style="font-size:21.3px;letter-spacing:3.7px;color:#ffffff">ACCEPT BOOKING</p></span>
             </div>
-            <div class="flyin">
-                <div class="avail avail2">available by request in select LA locations</div>
-                <div style="overflow:hidden">
-                    <img src="http://i.imgur.com/v4j7Lc0.jpg"/>
-                </div>
+            <div class="6" style="width:565px;border-radius:15px;background-color:#f5a623;margin-left:auto;margin-right:auto;height:98px;margin-bottom:79px;">
+                <span style="display:inline-block;vertical-align:middle;margin-top:15px;"><p style="font-size:21.3px;letter-spacing:3.7px;color:#ffffff">DECLINE BOOKING</p></span>
             </div>
-            <div id="evolve">
-                <span>Renting, <b>Evolved</b></span>
-                <img src="http://i.imgur.com/Dzzex83.png"/>
-                <p>Scan your licence using our state-of-the-art, patent-pending technology. This verifies your eligibility to use Skurt and streamlines all of your future rentals.</p>
-                <img src="http://i.imgur.com/ipGSnGm.png"/>
-                <p>No more photocopies of your licence stuffed into a filing cabinet. With Skurt, your licence is stored securely in a HIPAA-compliant environment.</p>
-                <img src="http://i.imgur.com/VqngrjR.png"/>
-                <p>Once you’re verified, you’ll be eligible to rent with Skurt and experience the magic of having a car delivered to you in just a few taps.</p>
-                <img src="http://i.imgur.com/cleTZmo.jpg" width="80%" height="80%"/>
+            <div>
+                <img style="width:56.6px;height:49.5px;margin-bottom:20px;" src="https://s3-us-west-1.amazonaws.com/booking-email/chat-iocn%403x.png"/>
+                <p style="margin:0; color:#595959;font-size:23.6px;font-weigth:700;">24/7 SUPPORT</p>
+                <div class="2" style="margin-bottom:24.3px;width:412.7px;height:1.7px;background-color:#4a90e2;border-radius:1px;margin-left:auto;margin-right:auto;"></div>
+                <p style="margin:12px 0 0 0;font-size:26px;color:#595959;">(404) 664 - 2944</p>
+                <p style="margin:12px 0 0 0;font-size:26px;color:#595959;">support@skurtapp.com</p>
+                <p class="7" style="margin:42px 0 0 0;font-size:20px;color:#595959;width:534px;margin-left:auto;margin-right:auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
-            <div class="value">
-                <img src="http://i.imgur.com/6dcbJXr.png"/><br>
-                <span>No Under 25 Fees</span>
-                <p>Rent any of our cars as long as you’re 21 years old. Never pay rip-off fees again.</p>
 
-                <div class="bline"></div>
-
-                <img src="http://i.imgur.com/9XzGR23.png"/><br>
-                <span>We Come To You</span>
-                <p>Book a car with a few taps and experience the magic of having it delivered.</p>
-
-                <div class="bline"></div>
-
-                <img src="http://i.imgur.com/NXVci8r.png"/><br>
-                <span>No More Paperwork</span>
-                <p>When you book with Skurt your entire rental is handled within the app. </p>
-
-                <div class="bline"></div>
-
-                <img src="http://i.imgur.com/ZwPFYIk.png"/><br>
-                <span>24/7 Support</span>
-                <p>Call or text us anytime to speak with our U.S based customer serivice team.</p>
-
-                <div class="bline"></div>
-
-                <img src="http://i.imgur.com/9erntWO.png"/><br>
-                <span>No Waiting Around</span>
-                <p>Say goodbye to long lines. Skurt will get you into a car in as little time as possible. </p>
-                
-                <div class="bline"></div>
-                
-                <img src="http://i.imgur.com/V7BmxAF.png"/><br>
-                <span>Road Side Assitance</span>
-                <p>Rest assured when you rent with Skurt, 24/7 we’re there for you in case anything happens.</p>
-            </div>
-            <div class="divider"></div>
-            <div class="value">
-                <p>"Skurt greeted me at the airport, walked my bags to the vehicle, and handed me the keys within 10 minutes of arrival. I'll be using it again next time I visit LA (in a few days, actually)."</p>
-                <div style="text-align:center">
-                    <div style="display:inline-block;vertical-align:top;">
-                        <img src="http://i.imgur.com/ExoykQN.png" style="border-radius:50%;border:2px solid white;"/>
-                    </div>
-                    <div style="display:inline-block;vertical-align:top;padding-top:40px;">
-                        <span class="hoover">Ryan Hoover</span><br>
-                        <span class="small">Product Hunt - Founder &amp; CEO</span>
-                        <!--<img src="http://i.imgur.com/jNsVTJg.png"/>
-                        <span class="twitter">via Twiter</span>-->
-                    </div>
-                </div>
-                
-            </div>
-            <div class="foot">
-                <img src="http://i.imgur.com/20jJJcl.png"/>
-                <span>EARN $50 GIVE $50</span>
-                <div class="bline"></div>
-                <p>Share your code <b>PAU455</b><br>You and a friend earn <b>$50</b></p>
-                
-                <img src="http://i.imgur.com/e9qexZm.png"/>
-                <span>24/7 SUPPORT</span>
-                <div class="bline"></div>
-                <p>(404) 664-2944<br>support@skurtapp.com</p>
-                
-                <div class="socialicons">
-                    <img src="http://i.imgur.com/Sbc57oW.png"/>
-                    <img src="http://i.imgur.com/S0jWhMI.png"/>
-                    <img src="http://i.imgur.com/qJbEnLX.png"/>
-                </div>
-                <div class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
-            </div>
-        </div>    
     </body>
 </html>
